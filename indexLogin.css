@@ -1,0 +1,205 @@
+/* IMPORT DE FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Outfit:wght@400;700&display=swap');
+
+/* ================= ROOT ================= */
+:root {
+  /* PALETA INPULSO */
+  --color-inpulso-yellow: #FFD700;
+  --color-inpulso-yellow-light: #FFF8DC;
+  --color-inpulso-purple: #8B5CF6;
+  --color-inpulso-purple-dark: #6D28D9;
+  --color-inpulso-purple-light: #A78BFA;
+
+  /* SISTEMA */
+  --primary: #8B5CF6;
+  --primary-foreground: #FFFFFF;
+
+  --background: #FFD700;
+  --foreground: #1F2937;
+
+  --card: #FFFFFF;
+  --card-foreground: #1F2937;
+
+  --popover: #FFFFFF;
+  --popover-foreground: #1F2937;
+
+  --secondary: #FFF8DC;
+  --secondary-foreground: #1F2937;
+
+  --muted: #F3F4F6;
+  --muted-foreground: #6B7280;
+
+  --accent: #8B5CF6;
+  --accent-foreground: #FFFFFF;
+
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+
+  --border: #E5E7EB;
+  --input: #FFFFFF;
+  --ring: #8B5CF6;
+
+  --radius: 1.5rem;
+}
+
+/* ================= DARK MODE ================= */
+.dark {
+  --primary: #A78BFA;
+  --primary-foreground: #1F2937;
+
+  --background: #1F2937;
+  --foreground: #F9FAFB;
+
+  --card: #374151;
+  --card-foreground: #F9FAFB;
+
+  --popover: #374151;
+  --popover-foreground: #F9FAFB;
+
+  --secondary: #4B5563;
+  --secondary-foreground: #F9FAFB;
+
+  --muted: #6B7280;
+  --muted-foreground: #D1D5DB;
+
+  --accent: #A78BFA;
+  --accent-foreground: #1F2937;
+
+  --destructive: #F87171;
+  --destructive-foreground: #1F2937;
+
+  --border: #4B5563;
+  --input: #4B5563;
+  --ring: #A78BFA;
+}
+
+/* ================= BASE ================= */
+* {
+  box-sizing: border-box;
+  border-color: var(--border);
+  outline-color: rgba(139, 92, 246, 0.5);
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* HEADINGS */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* INTERAÇÕES */
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]),
+a[href],
+select:not(:disabled),
+input[type="checkbox"]:not(:disabled),
+input[type="radio"]:not(:disabled) {
+  cursor: pointer;
+}
+
+/* ================= COMPONENTES ================= */
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* RESPONSIVO */
+@media (min-width: 640px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+    max-width: 1280px;
+  }
+}
+
+/* FLEX FIX */
+.flex {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* ================= COMPONENTES INPULSO ================= */
+
+/* INPUT */
+.inpulso-input {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  border: 2px solid var(--color-inpulso-purple);
+  background: #ffffff;
+  color: #1F2937;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.2s ease;
+}
+
+.inpulso-input::placeholder {
+  color: #9CA3AF;
+}
+
+.inpulso-input:focus {
+  outline: none;
+  border-color: var(--color-inpulso-purple-dark);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+}
+
+/* BOTÃO PRINCIPAL */
+.inpulso-button {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  border: none;
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--color-inpulso-purple);
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.inpulso-button:hover {
+  background: var(--color-inpulso-purple-dark);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+.inpulso-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.5);
+}
+
+/* BOTÃO SECUNDÁRIO */
+.inpulso-button-secondary {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  color: var(--color-inpulso-purple);
+  background: #ffffff;
+  border: 2px solid var(--color-inpulso-purple);
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.2s ease;
+}
+
+.inpulso-button-secondary:hover {
+  background: #f5f3ff;
+}
+
+.inpulso-button-secondary:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.5);
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>InPulso Jovem - Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+
+  <!-- LOGIN -->
+  <div class="card active" id="login">
+    <h2>Login</h2>
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="senha" placeholder="Senha" />
+    <button onclick="entrar()">Entrar</button>
+
+    <p onclick="trocarTela('cadastro')">Criar Conta</p>
+    <p onclick="trocarTela('recuperar')">Esqueci Minha Senha</p>
+  </div>
+
+  <!-- CADASTRO -->
+  <div class="card" id="cadastro">
+    <h2>Cadastro</h2>
+    <input type="text" placeholder="Nome" />
+    <input type="email" placeholder="Email" />
+    <input type="password" placeholder="Senha" />
+    <button>Cadastrar</button>
+
+    <p onclick="trocarTela('login')">Voltar</p>
+  </div>
+
+  <!-- RECUPERAR -->
+  <div class="card" id="recuperar">
+    <h2>Recuperar Senha</h2>
+    <input type="email" placeholder="Digite seu email" />
+    <button>Enviar código</button>
+
+    <p onclick="trocarTela('login')">Voltar</p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
